@@ -1,0 +1,38 @@
+<div class="container">
+
+<div class="pb-2 mt-4 mb-2">
+  <h1>Say My Name</h1>
+</div>
+
+<div>
+  <p>Now here we are on this other page, doing something. I have no idea what your name is, internet stranger. You just asked for this page, you got it.</p>
+</div>
+
+<div>
+  <h4>Request body say your name is: {{nameFromBody}}</h4>
+</div>
+
+<div>
+  <h4>Cookie say your name is: {{nameFromCookie}}</h4>
+</div>
+
+<div>
+  <h4>Session say your name is: {{nameFromSession}}</h4>
+</div>
+
+<div>
+  <p>If you look at your Network panel, you can see the Request Headers for this page included a 'Cookie' header with <code>nameCookie</code> and <code>connect.sid</code>. (<em>Request</em> because the cookies are going from client to server).</p>
+
+  <p>Importantly, if you open a new tab and type in:</p>
+  <pre>http://localhost:8080/nameContinue</pre>
+  <p>the cookie and session will still be there.</p>
+
+  <p>Cookies have an <code>maxAge</code> setting that <em>asks</em> the browser to keep them (and keep sending them) that long. If it is not specified, the cookie is deleted when you close your browser.</p>
+</div>
+
+
+<div>
+  <p><a href="name">(Go back)</a></p>
+</div>
+
+</div>
