@@ -1,0 +1,50 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/main.css"/>
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="row col-10 mt-4">
+			<h1>The Awesome Website of Awesome</h1>
+		</div>
+
+		<div class="row col-10 pb-2 mb-2 border-bottom">
+			Hello, Loser! I don't care who you are.
+		</div>
+
+		<div class="row col-10 justify-content-md-center mt-5">
+
+		<div class="card" style="width: 36rem;">
+		<div class="card-body">
+			<h5 class="card-title">But sure, log in. One big happy family here.</h5>
+
+			<form method="POST" action="/login">
+				<div class="form-group">
+					<label for="username">Username</label>
+					<input type="textbox" name="username" class="form-control" value="<%= locals.username %>" placeholder="Username">
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label>
+					<input type="password" name="password" class="form-control" placeholder="Password"> 
+				</div>
+					<% if (locals.failed) { %>
+					<div class="alert-danger p-3 rounded mb-2">
+						<p>No.</p>
+						<p>Wrong.</p>
+						<p>Is it your name giving you the trouble?</p>
+					</div>
+					<% } %>
+				<button type="submit" class="btn btn-primary">Login</button>
+			</form>
+		</div>
+		</div>
+
+		</div>
+	</div>
+</body>
+
+</html>

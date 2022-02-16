@@ -1,0 +1,44 @@
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/main.css"/>
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="row col-10 mt-4">
+			<h1>The Awesome Website of Awesome</h1>
+		</div>
+
+		<div class="row col-10 pb-2 mb-2 border-bottom">
+			Welcome, <%= user.username %>!
+			<% if (user.id) { %>
+			(<a href="/logout"><em>logout</em></a>)
+			<% } %>
+		</div>
+
+
+		<% if (user.admin) { %>
+			<div class="row col-10">
+				<p>You are Awesome. As a reward, here's a picture of a majestic Bengal Tiger.</p>
+			</div>
+	
+			<img class="row col-10" src="https://spotlight.it-notes.ru/wp-content/uploads/2018/10/1796d1d1f996adf7450b1f90720e6598.jpg">
+		<% } else { %>
+			<div class="row col-10">
+				<p>You are not an adminstrator. You are a common peasant from the
+				internet. You'll get a picture of garbage and like it.</p>
+			</div>
+
+			<img class="row col-10" src="http://img.timeinc.net/time/photoessays/2008/naples_garbage/garbage_naples_01.jpg">
+		<% } %>
+
+		<div class="row col-10">
+			<p><a href="/">Step off, man</a></p>
+		</div>
+
+	</div>
+</body>
+</html>
